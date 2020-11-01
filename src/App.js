@@ -40,7 +40,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 id="app-title">Kevin's Recipe Searcher</h1>
+      <h1 id="app-title">Kevin's Recipe Finder App</h1>
       <p id="app-subtitle">Powered by Edamam Recipe API</p>
       <form className="search-form">
         <input type="text" id="searchInputBox" value={searchTitle} onChange={updateSearch}></input>
