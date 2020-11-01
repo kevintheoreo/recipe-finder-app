@@ -12,7 +12,10 @@ const App = () => {
   const URL = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
   useEffect(
-    () => {getRecipes();} , [query]
+    () => {
+      getRecipes();
+
+    } , [query]
   );
 
   const getRecipes = async () => {
@@ -44,7 +47,7 @@ const App = () => {
       <p id="app-subtitle">Powered by Edamam Recipe API</p>
       <form className="search-form">
         <input type="text" id="searchInputBox" value={searchTitle} onChange={updateSearch}></input>
-        <button type="submit" id="searchButton" onClick={getSearch}><i class="fas fa-search"></i></button>
+        <button type="submit" id="searchButton" onClick={getSearch}><i className="fas fa-search"></i></button>
       </form>
 
       <div className="App-container">
