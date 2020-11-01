@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(
     () => {
-      // getRecipes();
+      getRecipes();
 
     } , [query]
   );
