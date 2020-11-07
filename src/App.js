@@ -44,7 +44,8 @@ const App = () => {
   return (
     <div className="App">
       <h1 id="app-title">Kevin's Recipe Finder App</h1>
-      <p id="app-subtitle">Powered by Edamam Recipe API</p>
+      <p id="app-subtitle">Powered by Edamam Recipe API (free)</p>
+      <p id="app-subtitle">Developed by Kevin De Rozario</p>
       <form className="search-form">
         <input type="text" id="searchInputBox" value={searchTitle} onChange={updateSearch}></input>
         <button type="submit" id="searchButton" onClick={getSearch}><i className="fas fa-search"></i></button>
