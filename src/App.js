@@ -2,10 +2,12 @@ import React, {useEffect, useState} from 'react';
 import Recipe from './Recipe'
 import './App.css';
 
+console.log(process.env.REACT_APP_ID);
+
 const App = () => {
 
-  const APP_ID = "47fb50ce";
-  const APP_KEY = "8d1d60534432383525e3d2dedaf7b17d";
+  const APP_ID = process.env.REACT_APP_ID;
+  const APP_KEY = process.env.REACT_APP_KEY;
   const [recipes, setRecipes] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
   const [query, setQuery] = useState("chicken");
