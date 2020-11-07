@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import Recipe from './Recipe'
 import './App.css';
 
-console.log(process.env.REACT_APP_ID);
-
 const App = () => {
 
   const APP_ID = process.env.REACT_APP_ID;
