@@ -17,7 +17,7 @@
 }
 
 #app-subtitle {
-  color: rgb(0, 0, 0, 0.8);
+  color: black;
   font-weight: lighter;
   font-style: italic;
 }
@@ -39,4 +39,9 @@
   font-size: 1em;
   border: solid 1px black;
   padding: 5px;
+}
+
+a {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }

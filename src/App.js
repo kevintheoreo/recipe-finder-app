@@ -41,7 +41,10 @@ const App = () => {
     <div className="App">
       <h1 id="app-title">Kevin's Recipe Finder App</h1>
       <p id="app-subtitle">Powered by Edamam Recipe API (free)</p>
-      <p id="app-subtitle">Developed by Kevin De Rozario</p>
+      <p id="app-subtitle">
+        Developed by
+        <a href="https://kevintheoreo.github.io"> Kevin De Rozario</a>
+      </p>
       <form className="search-form">
         <input
           type="text"
