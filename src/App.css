@@ -1,27 +1,29 @@
 .App {
   padding: 20px 0px 20px 0px;
   background-color: beige;
+  background-image: url("./assets/KevinRecipeBg1.png");
+  background-repeat: repeat;
   text-align: center;
 }
 
-.App-container{
+.App-container {
   /* background-color: black; */
   padding: 20px 20px 20px 20px;
 }
 
-#app-title{
-  font-family: 'Noto Serif SC', serif;
+#app-title {
+  font-family: "Noto Serif SC", serif;
   font-weight: 300;
 }
 
-#app-subtitle{
-  color: rgb(0,0,0,0.8);
+#app-subtitle {
+  color: rgb(0, 0, 0, 0.8);
   font-weight: lighter;
   font-style: italic;
 }
 
-#searchInputBox{
-  font-family: 'Noto Serif SC', serif;
+#searchInputBox {
+  font-family: "Noto Serif SC", serif;
   font-weight: 300;
   font-size: 1em;
   border: solid 1px black;
@@ -30,12 +32,11 @@
   margin-right: 5px;
 }
 
-#searchButton{
-  background-color: rgba(0,0,0,0.1);
+#searchButton {
+  background-color: rgba(0, 0, 0, 0.1);
   height: 35px;
   border-radius: 5px;
   font-size: 1em;
   border: solid 1px black;
   padding: 5px;
-
 }
