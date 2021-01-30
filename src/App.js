@@ -1,9 +1,8 @@
-import React, {useEffect, useState} from 'react';
-import Recipe from './Recipe'
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Recipe from "./Recipe";
+import "./App.css";
 
 const App = () => {
-
   const APP_ID = process.env.REACT_APP_ID;
   const APP_KEY = process.env.REACT_APP_KEY;
   const [recipes, setRecipes] = useState([]);
@@ -11,12 +10,9 @@ const App = () => {
   const [query, setQuery] = useState("chicken");
   const URL = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
-  useEffect(
-    () => {
-      getRecipes();
-
-    } , [query]
-  );
+  useEffect(() => {
+    getRecipes();
+  }, [query]);
 
   const getRecipes = async () => {
     const response = await fetch(URL);
@@ -27,19 +23,19 @@ const App = () => {
 
   const updateSearch = (e) => {
     setSearchTitle(e.target.value);
-    console.log("searchTitle:"+searchTitle)
-  }
+    console.log("searchTitle:" + searchTitle);
+  };
 
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(searchTitle);
-    console.log("query:"+query);
-  }
+    console.log("query:" + query);
+  };
 
   const floorString = (aString) => {
     var aNum = parseInt(aString);
-    return aNum+" kcal";
-  }
+    return aNum + " kcal";
+  };
 
   return (
     <div className="App">
@@ -47,23 +43,31 @@ const App = () => {
       <p id="app-subtitle">Powered by Edamam Recipe API (free)</p>
       <p id="app-subtitle">Developed by Kevin De Rozario</p>
       <form className="search-form">
-        <input type="text" id="searchInputBox" value={searchTitle} onChange={updateSearch}></input>
-        <button type="submit" id="searchButton" onClick={getSearch}><i className="fas fa-search"></i></button>
+        <input
+          type="text"
+          id="searchInputBox"
+          placeholder="Enter keyword here"
+          value={searchTitle}
+          onChange={updateSearch}
+        ></input>
+        <button type="submit" id="searchButton" onClick={getSearch}>
+          <i className="fas fa-search"></i>
+        </button>
       </form>
 
       <div className="App-container">
-        {recipes.map(data => (<Recipe
-          key={data.recipe.label}
-          title={data.recipe.label}
-          calories={floorString(data.recipe.calories)}
-          image={data.recipe.image}
-          ingredients={data.recipe.ingredientLines}
-        />))}
-
+        {recipes.map((data) => (
+          <Recipe
+            key={data.recipe.label}
+            title={data.recipe.label}
+            calories={floorString(data.recipe.calories)}
+            image={data.recipe.image}
+            ingredients={data.recipe.ingredientLines}
+          />
+        ))}
       </div>
-
     </div>
   );
-}
+};
 
 export default App;
