@@ -46,7 +46,7 @@ const App = () => {
         <input
           type="text"
           id="searchInputBox"
-          placeholder="Enter keyword here!"
+          placeholder="Enter keyword here!!!"
           value={searchTitle}
           onChange={updateSearch}
         ></input>
